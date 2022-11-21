@@ -1,0 +1,60 @@
+%! Author = frede
+%! Date = 19/11/2022
+
+% Preamble
+\documentclass[11pt]{article}
+\newcommand{\Rnd}{\text{Rnd}}
+\newcommand{\Pol}{\text{Pol}}
+\newcommand{\Rec}{\text{Rec}}
+
+% Packages
+\usepackage{amsmath}
+
+% Document
+\begin{document}
+    \title{F-83 Scripting Manual}
+    \author{Fred Sheppard}
+    \maketitle{}
+    \pagebreak
+
+
+    \section{Decimal to Binary}\label{sec:decimal-to-binary}
+    \[
+        \begin{align}
+            &\frac{0}{y} + 10^x \left(y-2\Rnd\left(\frac{y}{2}-0.5\right)\right) + \\
+            &0\Pol\left[\left(x+1\right) * \cos \left(\Rnd\left(\frac{y}{2}-0.5\right)\right),
+            \left(x+1\right) * \sin \left(\Rnd\left(\frac{y}{2}-0.5\right)\right] M+
+        \end{align}
+    \]
+    \begin{tabular}{|l|l|l|}
+        \hline
+        Variable & Start & End\\
+        \hline
+        $x$ & 0 & ?\\
+        \hline
+        $y$ & 10 & 0\\
+        \hline
+        $M$ & 0 & 1010\\
+        \hline
+    \end{tabular}
+
+    \section{Binary to Decimal}\label{sec:binary-to-decimal}
+    \[
+        \frac {0} { x - \Rnd\left( \log \left( A \right) + 0.5 \right) } +
+        2^x \left[ \Rnd \left( \frac{A} {10^x} - 0.5 \right) -10\Rnd \left( \frac{A}{10^{x+1}}-0.5 \right)\right]
+        + 0\Rec \left( x+1, 0 \right) M+
+    \]
+    \begin{tabular}{|l|l|l|}
+        \hline
+        Variable & Start & End\\
+        \hline
+        $x$ & 0 & ?\\
+        \hline
+        $A$ & 1011 & 0\\
+        \hline
+        $M$ & 0 & 11\\
+        \hline
+    \end{tabular}
+
+
+\end{document}
