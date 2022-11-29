@@ -27,17 +27,17 @@
     \end{align}
 
     \begin{center}
-    \begin{tabular}{|l|l|l|}
-        \hline
-        Variable & Start & End  \\
-        \hline
-        $x$      & 0     & ?    \\
-        \hline
-        $y$      & 10    & 0    \\
-        \hline
-        $M$      & 0     & 1010 \\
-        \hline
-    \end{tabular}
+        \begin{tabular}{|l|l|l|}
+            \hline
+            Variable & Start & End  \\
+            \hline
+            $x$      & 0     & ?    \\
+            \hline
+            $y$      & 10    & 0    \\
+            \hline
+            $M$      & 0     & 1010 \\
+            \hline
+        \end{tabular}
     \end{center}
 
 
@@ -50,17 +50,17 @@
 
 
     \begin{center}
-    \begin{tabular}{|l|l|l|}
-        \hline
-        Variable & Start & End \\
-        \hline
-        $x$      & 0     & ?   \\
-        \hline
-        $A$      & 1011  & 0   \\
-        \hline
-        $M$      & 0     & 11  \\
-        \hline
-    \end{tabular}
+        \begin{tabular}{|l|l|l|}
+            \hline
+            Variable & Start & End \\
+            \hline
+            $x$      & 0     & ?   \\
+            \hline
+            $A$      & 1011  & 0   \\
+            \hline
+            $M$      & 0     & 11  \\
+            \hline
+        \end{tabular}
     \end{center}
 
 
@@ -72,16 +72,36 @@
 
 
     \begin{center}
-    \begin{tabular}{|l|l|l|}
-        \hline
-        Variable & Start & End      \\
-        \hline
-        $x$      & $a$   & n        \\
-        \hline
-        $M$      & 0     & $\Sigma$ \\
-        \hline
-    \end{tabular}
+        \begin{tabular}{|l|l|l|}
+            \hline
+            Variable & Start & End      \\
+            \hline
+            $x$      & $a$   & n        \\
+            \hline
+            $M$      & 0     & $\Sigma$ \\
+            \hline
+        \end{tabular}
     \end{center}
 
+
+    \section{Sequences}\label{sec:sequences}
+    \begin{align}
+        Tn &=  A \cdot r^n \\
+        r &=  {\frac {T_y} {T_x} } ^ { \left( y-x \right) ^ {-1} }  \\
+        A &= \frac {T_x} {r^x}  \\
+        Sn &= \frac{ A \cdot r \left( 1 - r^n \right) } { 1 - r }
+    \end{align}
+
+    Where A is the starting value, i.e.. $T_0$ and r is the common ratio.
+
+
+    (3) In 2009, the population was 2,000.
+    By 2013, the population was 32,000.
+    Find the general formula.
+
+    \begin{align}
+        r &= { \frac {32,000} {2000} } ^ { \left( 2013-2009 \right) ^ {-1} } = 2 \\
+        A &= { \frac {32000} {2 ^ {\left( 2013-2009 \right)} } } = 2000
+    \end{align}
 
 \end{document}
