@@ -67,7 +67,7 @@
     \section{Sum}\label{sec:sum}
     \[
         \sum_{x=a}^{n} f\left(x\right) =
-        f(x) + \frac{0\Rec\left( x+1,~0\right)} {x - n+1} M+
+        f(x) + \frac{0\Rec\left( x+1,~0\right)} {x -n -2} M+
     \]
 
 
@@ -89,19 +89,35 @@
         Tn &=  A \cdot r^n \\
         r &=  {\frac {T_y} {T_x} } ^ { \left( y-x \right) ^ {-1} }  \\
         A &= \frac {T_x} {r^x}  \\
-        Sn &= \frac{ A \cdot r \left( 1 - r^n \right) } { 1 - r }
+        Sn &= \frac{ Ar \left( 1 - r^n \right) } { 1 - r }
     \end{align}
 
-    Where A is the starting value, i.e.. $T_0$ and r is the common ratio.
+    Where A is the starting value i.e. $T_0$ and r is the common ratio.
 
 
-    (3) In 2009, the population was 2,000.
+    In 2009, the population was 2,000.
     By 2013, the population was 32,000.
     Find the general formula.
 
+
+    \section{Financial Maths}\label{sec:financial-maths}
+    \paragraph{Mortgage}
     \begin{align}
-        r &= { \frac {32,000} {2000} } ^ { \left( 2013-2009 \right) ^ {-1} } = 2 \\
-        A &= { \frac {32000} {2 ^ {\left( 2013-2009 \right)} } } = 2000
+        A &= P \cdot \frac {i} { 1- \left(1+i\right) ^{-t}}
     \end{align}
+
+    \paragraph{Investment}
+    \begin{align}
+        A &= -P \cdot \frac {i} { 1- \left(1-i\right) ^{-t}}
+    \end{align}
+
+    Where: \\
+    $A$ is the monthly payment \\
+    $P$ is the Principle \\
+    $i$ is the monthly interest rate \\
+    $t$ is the time period in months \\
+
+    Note the two swapped signs in the Investment formula. \\
+    To get Principle from monthly payment, simply swap A \& P, and invert the fraction.
 
 \end{document}
