@@ -48,7 +48,6 @@
         + 0\Rec \left( x+1, 0 \right) M+
     \]
 
-
     \begin{center}
         \begin{tabular}{|l|l|l|}
             \hline
@@ -69,7 +68,6 @@
         \sum_{x=a}^{n} f\left(x\right) =
         f(x) + \frac{0\Rec\left( x+1,~0\right)} {x -n -2} M+
     \]
-
 
     \begin{center}
         \begin{tabular}{|l|l|l|}
@@ -94,30 +92,35 @@
 
     Where A is the starting value i.e. $T_0$ and r is the common ratio.
 
-
     In 2009, the population was 2,000.
     By 2013, the population was 32,000.
     Find the general formula.
 
 
-    \section{Financial Maths}\label{sec:financial-maths}
-    \paragraph{Mortgage}
+    \section{Probability}\label{sec:probability}
+
+    \paragraph{Venn Diagram}
     \begin{align}
-        A &= P \cdot \frac {i} { 1- \left(1+i\right) ^{-t}}
+        P\left(E \cup F\right) = P\left(E\right) + P\left(F\right) - P\left(E \cap F\right)
     \end{align}
 
-    \paragraph{Investment}
+    \paragraph{Conditional Events}
     \begin{align}
-        A &= -P \cdot \frac {i} { 1- \left(1-i\right) ^{-t}}
+        P\left(F|G\right) = \frac{P\left(F \cap G\right) } { P\left(G\right) }
     \end{align}
 
-    Where: \\
-    $A$ is the monthly payment \\
-    $P$ is the Principle \\
-    $i$ is the monthly interest rate \\
-    $t$ is the time period in months \\
+    \paragraph{Mutually Exclusive}
+    Both events cannot occur simultaneously - Their intersection is an empty set. \\
+    Draw a single card that: Is black \& is a Jack of Diamonds
+    \begin{align}
+        P\left(E \cup F\right) = P\left(E\right) + P\left(F\right)
+    \end{align}
 
-    Note the two swapped signs in the Investment formula. \\
-    To get Principle from monthly payment, simply swap A \& P, and invert the fraction.
+    \paragraph{Independent Events}
+    The outcome of one event has no bearing on the other.
+    Roll a die and flip a coin.
+    \begin{align}
+        P\left(E \cap F\right) = P\left(E\right) \cdot P\left(F\right)
+    \end{align}
 
 \end{document}
