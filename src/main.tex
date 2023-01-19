@@ -6,9 +6,12 @@
 \newcommand{\Rnd}{\text{Rnd}}
 \newcommand{\Pol}{\text{Pol}}
 \newcommand{\Rec}{\text{Rec}}
+\newcommand{\Perm}[2] { {}^{#1} \text{P}_{#2} }
 
 % Packages
 \usepackage{amsmath}
+
+
 
 % Document
 \begin{document}
@@ -42,11 +45,11 @@
 
 
     \section{Binary to Decimal}\label{sec:binary-to-decimal}
-    \[
-        \frac {0} { x - \Rnd\left( \log \left( A \right) + 0.5 \right) } +
-        2^x \left[ \Rnd \left( \frac{A} {10^x} - 0.5 \right) -10\Rnd \left( \frac{A}{10^{x+1}}-0.5 \right)\right]
-        + 0\Rec \left( x+1, 0 \right) M+
-    \]
+    \begin{align}
+        &\frac {0} { x - \Rnd\left( \log \left( A \right) + 0.5 \right) } +
+        2^x \left[ \Rnd \left( \frac{A} {10^x} - 0.5 \right) -10\Rnd \left( \frac{A}{10^{x+1}}-0.5 \right)\right] \\
+        &+ 0\Rec \left( x+1, 0 \right) M+
+    \end{align}
 
     \begin{center}
         \begin{tabular}{|l|l|l|}
@@ -64,10 +67,10 @@
 
 
     \section{Sum}\label{sec:sum}
-    \[
+    \begin{align}
         \sum_{x=a}^{n} f\left(x\right) =
         f(x) + \frac{0\Rec\left( x+1,~0\right)} {x -n -2} M+
-    \]
+    \end{align}
 
     \begin{center}
         \begin{tabular}{|l|l|l|}
@@ -121,6 +124,30 @@
     Roll a die and flip a coin.
     \begin{align}
         P\left(E \cap F\right) = P\left(E\right) \cdot P\left(F\right)
+    \end{align}
+
+    \paragraph{Selection: Order doesn't matter}
+    There are 23 balls in a box: 12 red, 6 blue and 5 green.
+    3 balls are chosen at random from the box.
+    What is the probability they are all different colours?
+    \begin{align}
+        P = \frac{ \binom{12}{1} \binom{6}{1} \binom{5}{1} } {\binom{23}{3}}
+    \end{align}
+
+    What is the probability exactly two balls are red?
+    \begin{align}
+        P = \frac{ \binom{12}{2} \binom{11}{1} } {\binom{23}{3}}
+    \end{align}
+
+    The tops and bottoms of the numerator must sum to the tops and bottoms
+    of the denominator.
+
+    \paragraph{Selection: Order Matters}
+    Four balls are selected from the box above.
+    What is the probability that the first 3 will be red
+    and the 4th will be any other colour?
+    \begin{align}
+        P = \frac { \Perm{12}{3} \cdot \Perm{11}{1} } {\Perm{23}{4}}
     \end{align}
 
 \end{document}
